@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package espol.edu.ec.main;
 
-import espol.edu.ec.tda.Constantes;
+import espol.edu.ec.tda.constantes;
 import espol.edu.ec.tda.TreeMorse;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -44,7 +39,7 @@ public class main extends Application {
         VBox v = new VBox(5, text, box,box2,tm);
         v.setBackground(new Background(new BackgroundFill(Color.AQUAMARINE, CornerRadii.EMPTY, Insets.EMPTY))); 
         v.setAlignment(Pos.TOP_LEFT);         
-        primaryStage.setScene(new Scene(v,Constantes.MAX_WIDTH,Constantes.MAX_HEIGHT));
+        primaryStage.setScene(new Scene(v,constantes.MAX_WIDTH,constantes.MAX_HEIGHT));
         btn.setOnAction(e-> tm.descifrar(input.getText()));
         reiniciar.setOnAction(e ->{
             tm.reset();

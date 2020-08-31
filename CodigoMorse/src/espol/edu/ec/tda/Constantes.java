@@ -8,12 +8,9 @@ package espol.edu.ec.tda;
 import javafx.geometry.Rectangle2D;
 import javafx.stage.Screen;
 
-/**
- *
- * @author Christian Guerrero
- */
-public class Constantes {
-      private Constantes(){
+
+public class constantes {
+      private constantes(){
         //
     } 
     

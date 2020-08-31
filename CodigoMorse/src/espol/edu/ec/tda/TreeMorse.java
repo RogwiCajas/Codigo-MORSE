@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package espol.edu.ec.tda;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -21,13 +15,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.LinearGradient;
 import javafx.scene.shape.Line;
 import javafx.util.Duration;
 
 /**
  *
- * @author Christian Guerrero
+ * @author isaac
  */
 public class TreeMorse extends Pane {
     private Node root;
@@ -38,7 +31,7 @@ public class TreeMorse extends Pane {
     public TreeMorse() {
         root = new Node("Inicio");
         root.setFill(Color.BLUE);
-        root.setTranslateX(Constantes.X/2-20);
+        root.setTranslateX(constantes.X/2-20);
         root.setTranslateY(0);
         mapa =loadMap();
                 super.getChildren().add(root);
@@ -48,7 +41,7 @@ public class TreeMorse extends Pane {
         point = new AudioClip(TreeMorse.class.getResource("/espol/edu/ec/Sound/punto.mp3").toExternalForm());
 
          for(Map.Entry<String, String[]> m: mapa.entrySet())
-            disenioArbol(root, m.getValue(), m.getKey(), 0, m.getValue().length, Constantes.MAX_WIDTH);
+            disenioArbol(root, m.getValue(), m.getKey(), 0, m.getValue().length, constantes.MAX_WIDTH);
         String[] s = {" "};
         mapa.put(" ", s);
         
